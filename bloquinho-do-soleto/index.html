@@ -32,6 +32,14 @@ src="https://www.facebook.com/tr?id=7746372078780673&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
    
 </head>
+
+	  <script>
+        // Função para executar o evento de lead do pixel do Facebook
+        function trackFacebookLead(event) {
+            fbq('track', 'Lead', {content_name: 'Sua Música'});
+            window.location.href = event.target.href;
+        }
+    </script>
 <body>
 
 
@@ -136,9 +144,9 @@ src="https://www.facebook.com/tr?id=7746372078780673&ev=PageView&noscript=1"
 
         <!-- Link para download -->
         
-        <a href="https://suamusica.com.br/jeansimiaox/musica-para-paredao-bloquinho-do-soleto-pagodao-2024" target="_blank" title="Música para Paredão">Ouvir/Baixar no SuaMúsica</a>
+        <a href="https://suamusica.com.br/jeansimiaox/musica-para-paredao-bloquinho-do-soleto-pagodao-2024" onclick="trackFacebookLead(event); return false;" target="_blank" title="Música para Paredão">Ouvir/Baixar no SuaMúsica</a>
 	    <p>Siga-me no Instagram: @jeansoleto</p>
-	    <a href="instagram://user?username=jeansoleto" target="_blank" title="Jean Soleto - Instagram">Acessar Instagram</a>
+	    <a href="instagram://user?username=jeansoleto" onclick="trackFacebookLead(event); return false;" target="_blank" title="Jean Soleto - Instagram">Acessar Instagram</a>
         
     </div>
     </div>
