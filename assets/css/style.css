@@ -1,31 +1,53 @@
-body, html {
-    margin: 0;
-    padding: 0;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3b2042;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+.music-player {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+}
+
+.music-player picture {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #120C16; /* Substitua pelo código da cor de fundo */
+    max-width: 300px;
 }
 
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
+.music-player img {
     width: 100%;
-    height: 100%;
-    background-color: #120C16; /* Substitua pelo código da cor de fundo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    max-width: 300px;
+    border-radius: 20px;
 }
 
-#loading-screen img {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
+.music-player audio {
+    width: 100%;
+    margin-top: 10px;
 }
 
-#content {
-    display: none; /* Esconda o conteúdo inicialmente */
+.music-player a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3b2042;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
+
+.music-player a:hover {
+    background-color: #0056b3;
+}
+
+
+
