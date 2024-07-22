@@ -21,6 +21,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5HVZX5NL');</script>
 <!-- End Google Tag Manager -->
+
+<style>
+    .video-container {
+        position: relative;
+        width: 300px;
+        margin: auto;
+    }
+
+    .video-container img {
+        width: 100%;
+        display: block;
+    }
+
+    .play-button {
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(255 0 0);
+    border: none;
+    color: white;
+    padding: 20px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 10px 13px rgb(2 2 2 / 51%);
+    }
+
+    video {
+        display: none;
+        width: 100%;
+        border-radius: 20px;
+    }
+</style>
    
 </head>
 
@@ -99,13 +133,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <div class="music-player">
+
+        <div class="video-container">
+            
+
+            <picture>
+                <source srcset="assets/img/logo.webp" type="image/webp">
+                <source srcset="assets/img/logo.jpeg" type="image/jpeg">
+                <img src="assets/img/logo.jpeg" alt="Player Image" id="thumbnail">
+            </picture>
+            <button class="play-button" onclick="playVideo()">▶</button>
+            <video id="video" controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
         <!-- Imagem do álbum -->
        
-        <picture>
-            <source srcset="assets/img/logo.webp" type="image/webp">
-            <source srcset="assets/img/logo.jpeg" type="image/jpeg">
-            <img src="assets/img/logo.jpeg" alt="O neurótico">
-        </picture>
+       
 
         <div></div>
 
@@ -141,6 +187,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         </footer>
     
+        <script>
+            function playVideo() {
+                document.getElementById('thumbnail').style.display = 'none';
+                document.querySelector('.play-button').style.display = 'none';
+                document.getElementById('video').style.display = 'block';
+                document.getElementById('video').play();
+            }
+        </script>
 
 </body>
 </html>
