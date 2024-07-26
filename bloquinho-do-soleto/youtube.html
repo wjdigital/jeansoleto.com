@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://jeansoleto.com/bloquinho-do-soleto/youtube.html" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionamento por Dispositivo</title>
+    <script>
+        function redirecionar() {
+            // URL para desktop
+            const urlDesktop = "https://www.youtube.com/watch?v=xgnznIQ4vT0";
+            // URL para celular
+            const urlMobile = "youtube://xgnznIQ4vT0";
+            
+            // Detecta se o dispositivo é um celular
+            if (/Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent)) {
+                window.location.href = urlMobile;
+            } else {
+                window.location.href = urlDesktop;
+            }
+        }
+    </script>
+</head>
+<body onload="redirecionar()">
+    <p>Redirecionando...</p>
+</body>
+</html>
