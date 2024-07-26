@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://jeansoleto.com/bloquinho-do-soleto/spotify.html" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionamento por Dispositivo</title>
+    <script>
+        function redirecionar() {
+            // URL para desktop
+            const urlDesktop = "https://open.spotify.com/intl-pt/album/09puKbkH90MCnYnWSxgq65";
+            // URL para celular
+            const urlMobile = "spotify:album:09puKbkH90MCnYnWSxgq65";
+            
+            // Detecta se o dispositivo é um celular
+            if (/Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent)) {
+                window.location.href = urlMobile;
+            } else {
+                window.location.href = urlDesktop;
+            }
+        }
+    </script>
+</head>
+<body onload="redirecionar()">
+    <p>Redirecionando...</p>
+  <p>Se você não for redirecionado, <a href="https://open.spotify.com/intl-pt/album/09puKbkH90MCnYnWSxgq65">clique aqui</a></p>
+  
+</body>
+</html>
