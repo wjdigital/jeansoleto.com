@@ -67,10 +67,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	     <p style="margin: 30px 0px -10px 0px;">Bloquinho da 7Paredão 1.0</p>
       
-  
+  <a href="#" id="dynamicLink">Ouça no YouTube</a>
+
+    <script>
+        document.getElementById('dynamicLink').addEventListener('click', function (event) {
+            event.preventDefault();
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Detect if it's a mobile device
+            if (/android|iPad|iPhone|iPod/.test(userAgent.toLowerCase())) {
+                window.location.href = 'youtube://hKqgCzOfJnM';
+            } else {
+                window.location.href = 'https://www.youtube.com/watch?v=hKqgCzOfJnM';
+            }
+        });
+    </script>
     
-       <a href="youtube://hKqgCzOfJnM"  target="_blank" title="Bloquinho">Ouça agora</a>
-       <br>
+
 	   
     </div>
     </div>
