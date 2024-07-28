@@ -1,7 +1,7 @@
-document.getElementById('smartlink').addEventListener('click', function(event) {
+document.getElementById('yt').addEventListener('click', function(event) {
     event.preventDefault();
     
-    var videoId = "dQw4w9WgXcQ"; // Substitua pelo ID do seu vídeo do YouTube
+    var videoId = "I3IO-HRjlvY"; // Substitua pelo ID do seu vídeo do YouTube
 
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
